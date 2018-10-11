@@ -55,7 +55,7 @@ PROJECT := Quadcopter
 # Objects and Paths
 
 OBJECTS += main.o
-OBJECTS += nRF24L01P/nRF24L01P.o
+OBJECTS += RF24/RF24.o
 
  SYS_OBJECTS += mbed/TARGET_NUCLEO_F303K8/TOOLCHAIN_GCC_ARM/PeripheralPins.o
  SYS_OBJECTS += mbed/TARGET_NUCLEO_F303K8/TOOLCHAIN_GCC_ARM/analogin_api.o
@@ -172,7 +172,7 @@ INCLUDE_PATHS += -I../mbed/TARGET_NUCLEO_F303K8/TARGET_STM/TARGET_STM32F3/device
 INCLUDE_PATHS += -I../mbed/drivers
 INCLUDE_PATHS += -I../mbed/hal
 INCLUDE_PATHS += -I../mbed/platform
-INCLUDE_PATHS += -I../nRF24L01P
+INCLUDE_PATHS += -I../RF24
 
 LIBRARY_PATHS := -L../mbed/TARGET_NUCLEO_F303K8/TOOLCHAIN_GCC_ARM 
 LIBRARIES := -lmbed 
@@ -363,7 +363,7 @@ ASM_FLAGS += -I../mbed/TARGET_NUCLEO_F303K8/TARGET_STM/TARGET_STM32F3/device
 ASM_FLAGS += -I../mbed/drivers
 ASM_FLAGS += -I../mbed/hal
 ASM_FLAGS += -I../mbed/platform
-ASM_FLAGS += -I../nRF24L01P
+ASM_FLAGS += -I../RF24
 ASM_FLAGS += -include
 ASM_FLAGS += /filer/workspace_data/exports/9/9c3d0a61e174112229403a49337a862e/Quadcopter/mbed_config.h
 ASM_FLAGS += -x
