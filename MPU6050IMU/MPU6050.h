@@ -180,7 +180,7 @@ float GyroMeasError = PI * (60.0f / 180.0f);     // gyroscope measurement error 
 float beta = sqrt(3.0f / 4.0f) * GyroMeasError;  // compute beta
 float GyroMeasDrift = PI * (1.0f / 180.0f);      // gyroscope measurement drift in rad/s/s (start at 0.0 deg/s/s)
 float zeta = sqrt(3.0f / 4.0f) * GyroMeasDrift;  // compute zeta, the other free parameter in the Madgwick scheme usually set to a small or zero value
-float pitch, yaw, roll;
+
 float deltat = 0.0f;                              // integration interval for both filter schemes
 int lastUpdate = 0, firstUpdate = 0, Now = 0;     // used to calculate integration interval                               // used to calculate integration interval
 float q[4] = {1.0f, 0.0f, 0.0f, 0.0f};            // vector to hold quaternion
